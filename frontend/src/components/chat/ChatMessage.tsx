@@ -1,3 +1,5 @@
+// INDIVIDUAL CHAT MESSAGE
+
 import type { Message } from '@/types/chat'
 import { cn } from '@/lib/utils'
 

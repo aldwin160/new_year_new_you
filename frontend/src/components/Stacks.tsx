@@ -28,13 +28,13 @@ export default function Stacks() {
             <motion.div
               key={tech.name}
               className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg text-center border border-border hover:border-primary hover:bg-primary/10"
-              initial={{ opacity: 0, y: 400 }}
+              initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.05, ease: [0.25, 0.46, 0.45, 0.94] as const }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true, amount: 0.7 }}
             >
               <div className="flex items-center justify-center gap-3">
-                <span className="text-2xl font-semibold text-card-foreground">
+                <span className="text-xl md:text-2xl font-semibold text-card-foreground">
                   {tech.name}
                 </span>
                 <div className="text-4xl">

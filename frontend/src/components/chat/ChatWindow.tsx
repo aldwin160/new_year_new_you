@@ -1,3 +1,5 @@
+// CHAT CONTAINER WITH HEADER, MESSAGES, AND INPUT
+
 import { useEffect, useRef } from 'react'
 import type { Message } from '@/types/chat'
 import ChatHeader from './ChatHeader'
@@ -25,7 +27,7 @@ export default function ChatWindow({
   }, [messages])
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 w-96 h-[600px] bg-card border border-border rounded-lg shadow-2xl flex flex-col overflow-hidden">
+    <div className="w-[calc(100vw-2rem)] sm:w-96 h-[600px] max-h-[calc(100vh-2rem)] bg-card border border-border rounded-lg shadow-2xl flex flex-col overflow-hidden">
       <ChatHeader onClose={onClose} />
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">

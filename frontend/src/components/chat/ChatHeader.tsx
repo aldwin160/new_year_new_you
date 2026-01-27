@@ -1,8 +1,10 @@
+// CHAT HEADER COMPONENT WITH CLOSE BUTTON
+
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 interface ChatHeaderProps {
-  onClose: () => void
+  readonly onClose: () => void
 }
 
 export default function ChatHeader({ onClose }: ChatHeaderProps) {

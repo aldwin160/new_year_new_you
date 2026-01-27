@@ -1,3 +1,5 @@
+// MAIN LOGIC
+
 import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import type { Message } from '@/types/chat'
@@ -57,13 +59,17 @@ export default function FloatingChat() {
   }
 
   const chatExpand = {
-    initial: { opacity: 0, scale: 0.8, y: 20 },
-    animate: { opacity: 1, scale: 1, y: 0 },
-    exit: { opacity: 0, scale: 0.8, y: 20 },
+    initial: { opacity: 0, scale: 0.2, x: 10, y: 10 },
+    animate: { opacity: 1, scale: 1, x: 0, y: 0 },
+    exit: { opacity: 0, scale: 0.2, x: 10, y: 10 },
     transition: {
-      duration: 0.3,
+      duration: 0.4,
       ease: [0.25, 0.46, 0.45, 0.94] as const,
     },
+    style: {
+      originX: 1,
+      originY: 1,
+    }
   }
 
   return (
@@ -74,7 +80,7 @@ export default function FloatingChat() {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div {...chatExpand}>
+          <motion.div {...chatExpand} className="fixed bottom-6 right-6 z-50">
             <ChatWindow
               messages={messages}
               onClose={() => setIsOpen(false)}

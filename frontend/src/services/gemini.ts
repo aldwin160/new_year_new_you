@@ -1,13 +1,13 @@
-import { GoogleGenerativeAI } from '@google/generative-ai'
+import { type GenerativeModel, GoogleGenerativeAI } from '@google/generative-ai'
 import type { Message } from '@/types/chat'
 
 export class GeminiService {
-  private genAI: GoogleGenerativeAI
-  private model: any
+  readonly genAI: GoogleGenerativeAI
+  readonly model: GenerativeModel
 
   constructor(apiKey: string) {
     this.genAI = new GoogleGenerativeAI(apiKey)
-    this.model = this.genAI.getGenerativeModel({ model: 'gemini-3-flash-preview' })
+    this.model = this.genAI.getGenerativeModel({ model: 'gemini-2.5-flash' })
   }
 
   async sendMessage(message: string, history: Message[]): Promise<string> {

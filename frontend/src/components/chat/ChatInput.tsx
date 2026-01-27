@@ -1,3 +1,5 @@
+// MESSAGE INPUT BOX
+
 import { useState } from 'react'
 import { Send } from 'lucide-react'
 import { Input } from '@/components/ui/input'
