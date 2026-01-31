@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import type { Message } from '@/types/chat'
 import { GeminiService, getGeminiApiKey } from '@/services/gemini'
+import { systemPrompt } from '@/prompts'
 import ChatButton from './ChatButton'
 import ChatWindow from './ChatWindow'
 
@@ -20,7 +21,7 @@ export default function FloatingChat() {
       setError('Gemini API key not found. Please add VITE_GEMINI_API_KEY to your .env.local file.')
       return
     }
-    setGeminiService(new GeminiService(apiKey))
+    setGeminiService(new GeminiService(apiKey, systemPrompt))
   }, [])
 
   const handleSendMessage = async (content: string) => {

@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
-import { scrollFadeUp } from "../motion";
+import { scrollFadeInUp } from "../motion";
 
 export default function Hero() {
   return (
     <motion.section 
       className="min-h-screen flex items-center justify-center px-4 bg-background"
-      {...scrollFadeUp}
+      {...scrollFadeInUp}
     >
         <div className="text-center max-w-3xl bg-background">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">

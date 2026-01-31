@@ -1,3 +1,6 @@
+import { motion } from 'motion/react'
+import { scrollFadeInUp, cardsAnimation } from '@/motion'
+
 interface ExperienceItem {
   title: string
   period: string
@@ -46,13 +49,17 @@ export default function Experience() {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20">
       <div className="w-full max-w-4xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center">
+        <motion.h2
+          {...scrollFadeInUp}
+          className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center"
+        >
           Experience
-        </h2>
+        </motion.h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div
+            <motion.div
               key={index}
+              {...cardsAnimation(index)}
               className="bg-card rounded-lg p-8 shadow-md hover:shadow-lg border border-border hover:border-primary"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
@@ -72,7 +79,7 @@ export default function Experience() {
                   <li key={idx}>{responsibility}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { scrollFadeIn } from "../motion";
+import {  scrollFadeInUp, cardsAnimation as cardsAnimation } from "../motion";
 
 import { FaReact } from 'react-icons/fa'
 import { SiTailwindcss, SiTypescript, SiExpress, SiDrizzle, SiPostgresql } from 'react-icons/si'
@@ -19,7 +19,7 @@ export default function Stacks() {
       <div className="w-full max-w-4xl">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-foreground mb-12 text-center"
-          {...scrollFadeIn}
+          {...scrollFadeInUp}
         >
           Technologies I Work With
         </motion.h2>
@@ -28,10 +28,7 @@ export default function Stacks() {
             <motion.div
               key={tech.name}
               className="bg-card rounded-lg p-6 shadow-md hover:shadow-lg text-center border border-border hover:border-primary hover:bg-primary/10"
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.05, ease: [0.25, 0.46, 0.45, 0.94] as const }}
-              viewport={{ once: true, amount: 0.7 }}
+              {...cardsAnimation(index)}
             >
               <div className="flex items-center justify-center gap-3">
                 <span className="text-xl md:text-2xl font-semibold text-card-foreground">

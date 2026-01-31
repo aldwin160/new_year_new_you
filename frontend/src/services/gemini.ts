@@ -5,9 +5,12 @@ export class GeminiService {
   readonly genAI: GoogleGenerativeAI
   readonly model: GenerativeModel
 
-  constructor(apiKey: string) {
+  constructor(apiKey: string, systemInstruction?: string) {
     this.genAI = new GoogleGenerativeAI(apiKey)
-    this.model = this.genAI.getGenerativeModel({ model: 'gemini-2.5-flash' })
+    this.model = this.genAI.getGenerativeModel({
+      model: 'gemini-2.5-flash',
+      systemInstruction: systemInstruction,
+    })
   }
 
   async sendMessage(message: string, history: Message[]): Promise<string> {
