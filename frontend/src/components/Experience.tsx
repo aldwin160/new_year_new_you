@@ -12,36 +12,36 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     title: 'Graphic Designer',
-    period: '2022–2023',
+    period: 'Sep 2022 – Jul 2023',
     company: 'Honda Jakarta Center',
     responsibilities: [
-      'Created brand visuals and merchandise designs.',
-      'Developed key visuals for campaigns and international events.',
-      'Supported company-wide creative needs.',
+      'Created merchandise designs for events and campaigns.',
+      'Created key visuals for exhibitions, events, and campaigns',
+      'Managing Honda Jakarta Center Official Website',
     ],
     description: 'Designed impactful visuals for campaigns, merchandise, and major events.',
   },
   {
     title: 'Marketing Event',
-    period: '2023–2025',
+    period: 'Jul 2023 – Aug 2025',
     company: 'Honda Jakarta Center',
     responsibilities: [
-      'Led and managed large-scale automotive exhibitions.',
-      'Coordinated international and regional events.',
-      'Delivered end-to-end event planning and reporting.',
+      'Led Honda Car Participation in International Exhibition',
+      'Led Area Gathering 2025 (a series of customer engagement events across Greater Jakarta.',
+      'Managed Monthly Honda Exhibition in Malls across Greater Jakarta',
     ],
-    description: 'Led major Honda exhibitions and customer events across Jabodetabek.',
+    description: 'Led major Honda exhibitions and customer events across Greater Jakarta.',
   },
   {
     title: 'Distribution Team',
-    period: '2025–Present',
+    period: 'Aug 2025 – Present',
     company: 'Honda Jakarta Center',
     responsibilities: [
-      'Managed unit allocation for 40+ dealers.',
-      'Controlled warehouse inflow and inventory.',
-      'Coordinated monthly dealer orders.',
+      'Managed car allocation for 40+ dealers.',
+      'Managed inventory inflow on Honda warehouse',
+      'Managed monthly dealer orders and monthly supply',
     ],
-    description: 'Handled vehicle distribution and dealer allocation nationwide.',
+    description: 'Handled vehicle distribution and dealer allocation across Greater Jakarta.',
   },
 ]
 
