@@ -26,7 +26,7 @@ export default function Hero() {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-          Hello, my name is Aldwin
+          Hello, my name is <span className="text-primary">Aldwin</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
           I experienced in graphic design, event marketing, and distribution operations. I am currently transitioning into fullstack development.</p>
